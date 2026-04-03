@@ -6,8 +6,6 @@ import DailyPage from './pages/DailyPage';
 import LeaderboardPage from './pages/LeaderboardPage';
 import ProfilePage from './pages/ProfilePage';
 import AnalyticsPage from './pages/AnalyticsPage';
-import DSAProgressDashboard from './pages/DSAProgressDashboard';
-import CalendarHeatmap from './pages/CalendarHeatmap';
 import Toast from './components/Toast';
 import { api } from './utils/api';
 
@@ -30,8 +28,6 @@ function pageToPath(page) {
   if (page === 'leaderboard') return '/leaderboard';
   if (page === 'profile') return '/profile';
   if (page === 'analytics') return '/analytics';
-  if (page === 'dsa') return '/dsa';
-  if (page === 'roadmap') return '/roadmap';
   return '/';
 }
 
@@ -40,8 +36,6 @@ function pathToPage(pathname) {
   if (pathname.startsWith('/leaderboard')) return 'leaderboard';
   if (pathname.startsWith('/profile')) return 'profile';
   if (pathname.startsWith('/analytics')) return 'analytics';
-  if (pathname.startsWith('/dsa')) return 'dsa';
-  if (pathname.startsWith('/roadmap')) return 'roadmap';
   return 'dashboard';
 }
 
@@ -116,8 +110,6 @@ export default function App() {
           {page === 'daily'       && <DailyPage onSaveAnswer={handleSaveAnswer} />}
           {page === 'leaderboard' && <LeaderboardPage records={records} user={user} />}
           {page === 'profile'     && <ProfilePage records={records} user={user} onLogout={handleLogout} />}
-          {page === 'dsa'         && <DSAProgressDashboard />}
-          {page === 'roadmap'     && <CalendarHeatmap />}
 
         </Layout>
       )}

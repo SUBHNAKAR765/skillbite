@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/purity, no-unused-vars, no-undef */
 import { useState, useEffect, useRef, useCallback } from 'react'
-import { BookOpen, ChevronRight, ArrowLeft, Languages, Dumbbell, Flame, Salad, ChartLine, Target, Activity, CheckCircle2, Monitor, Server, Database } from 'lucide-react'
+import { BookOpen, ChevronRight, ArrowLeft, Languages, Dumbbell, Flame, Salad, TrendingUp, Target, Activity, CheckCircle2, Monitor, Server, Database } from 'lucide-react'
 import Editor from '@monaco-editor/react'
 import ProblemPage from './ProblemPage'
 import { SKILL_CATEGORIES, questionBank } from '../data/questions'
@@ -2824,7 +2824,7 @@ export default function DailyPage({ onSaveAnswer }) {
       if (iconName === 'Dumbbell') return <Dumbbell size={18} />
       if (iconName === 'Salad') return <Salad size={18} />
       if (iconName === 'Target') return <Target size={18} />
-      if (iconName === 'ChartLine') return <ChartLine size={18} />
+      if (iconName === 'ChartLine') return <TrendingUp size={18} />
       return <Activity size={18} />
     }
 

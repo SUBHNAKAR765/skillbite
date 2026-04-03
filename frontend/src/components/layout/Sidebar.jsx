@@ -1,12 +1,10 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion'; // eslint-disable-line no-unused-vars
-import { Home, BarChart2, CheckSquare, Trophy, Settings, LogOut, ListChecks, Calendar } from 'lucide-react';
+import { Home, BarChart2, CheckSquare, Trophy, Settings, LogOut } from 'lucide-react';
 
 const menuItems = [
   { name: 'Dashboard',   icon: Home,        path: 'dashboard' },
   { name: 'Daily Bite',  icon: CheckSquare, path: 'daily' },
-  { name: 'DSA Tracker', icon: ListChecks,  path: 'dsa' },
-  { name: 'Roadmap',     icon: Calendar,    path: 'roadmap' },
   { name: 'Leaderboard', icon: Trophy,      path: 'leaderboard' },
   { name: 'Analytics',   icon: BarChart2,   path: 'analytics' },
   { name: 'Profile',     icon: Settings,    path: 'profile' },

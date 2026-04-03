@@ -1,5 +1,5 @@
 import { useState, useMemo } from 'react'
-import { CheckCircle2, Circle, RotateCcw, BookmarkStar, ChevronDown, ChevronUp } from 'lucide-react'
+import { CheckCircle2, Circle, RotateCcw, Bookmark, ChevronDown, ChevronUp } from 'lucide-react'
 
 const CATEGORIES = [
   { key: 'arrays',        label: 'Arrays',              total: 40, easy: 15, medium: 18, hard: 7 },
@@ -169,7 +169,7 @@ export default function DSAProgressDashboard() {
                         {/* Revision star */}
                         <button onClick={() => setProblStatus(p.key, status[p.key] === 'revision' ? null : 'revision')}
                           className="shrink-0">
-                          <BookmarkStar size={14} className={status[p.key] === 'revision' ? 'text-orange-400' : 'text-gray-700 hover:text-gray-500'} />
+                          <Bookmark size={14} className={status[p.key] === 'revision' ? 'text-orange-400' : 'text-gray-700 hover:text-gray-500'} />
                         </button>
 
                         {/* Note */}
